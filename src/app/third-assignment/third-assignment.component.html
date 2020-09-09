@@ -1,0 +1,13 @@
+
+<div [ngStyle]= "{backgroundColor: count.length >= 5 ? 'blue' : ''}" [ngClass]="{'white-color' : count.length >=5}">
+  
+        <p>third-assignment works!</p>
+
+        <button class="btn btn-primary" (click) = "toggleFunc()"> Display Details</button>
+        
+        
+        <p *ngIf = "toggle"> {{ Content }}</p>
+        
+        <div *ngFor= "let logItems of count" >{{logItems}}</div>
+    
+</div>

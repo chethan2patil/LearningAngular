@@ -1,0 +1,9 @@
+<p>second-assignment works!</p>
+
+<input type="text" class="form-container" [(ngModel)] = "userName" >
+
+<p>{{ userName}}</p>
+
+<hr>
+
+<button class="btn btn-primary"  [disabled]= "userName === ''" (click)= "emptyUserNameString()">Empty</button>
