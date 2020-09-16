@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
 @Component({
@@ -13,7 +13,7 @@ import {FormsModule} from '@angular/forms';
     `]
 })
 
-export class ServerComponent {
+export class ServerComponent implements OnInit{
     allowServers = false;
     ServerId = '402';
     serverStatus = 'Offline from method'
@@ -22,6 +22,7 @@ export class ServerComponent {
     showContent = false;
 
     constructor(){
+        console.log('constructor')
         setTimeout(() => {
             this.allowServers = true;
         }, 
@@ -30,6 +31,11 @@ export class ServerComponent {
     getStatus(){
         return this.serverStatus;
     }
+ 
+    
+      ngOnInit(): void {
+        console.log('ngoninit')
+      }
 
     onCreateServer(){
         this.showContent = true;

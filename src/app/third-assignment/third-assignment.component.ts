@@ -9,9 +9,12 @@ export class ThirdAssignmentComponent implements OnInit {
   Content = "secret password = cp";
   toggle = true;
   count = [];
-  constructor() { }
+  constructor() {
+  //  console.log('constructor')
+   }
 
   ngOnInit(): void {
+    //console.log('ngoninit')
   }
   toggleFunc(){
    // this.count.push(this.count.length +1);
